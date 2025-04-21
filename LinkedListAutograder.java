@@ -162,7 +162,6 @@ public class LinkedListAutograder{
     a4.append(b21);
 
     LinkedList a5 = LinkedListUtil.reverse(a2);
-
     boolean t11 = LinkedListUtil.compare(a2, a3);
     boolean t12 = LinkedListUtil.compare(a4, a5);
 
