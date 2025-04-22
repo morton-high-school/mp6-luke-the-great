@@ -1,42 +1,32 @@
 public class Queue{
-    private int size;
-    private Node first;
+    private LinkedList balkan = new LinkedList();
     public Queue(){
-        size = 0;
-        first = null;
-    } //- default constructor
+        balkan = new LinkedList();
+    }// - default constructor
     public void add(Node item){
-        if(first == null){
-            first = item;
-        }
-        first.next = item;
-
-    } //- adds an item to the back of the queue
+        balkan.insert(item, 0);
+    }// - adds an item to the back of the queue
     public Node remove(){
-        Node temp = first;
-        for(int i=0; i<size; i++){
-            first = first.next;
-        }
-        return temp;
-
+        Node rage = new Node(LinkedListUtil.getNode(balkan, LinkedListUtil.length(balkan)-1).getData());
+        balkan.remove(LinkedListUtil.length(balkan)-1);
+        return rage;
     } //- removes and returns the item from the front of the queue
     public Node peek(){
-        return first;
-
-    } //- returns the item from the front of the queue
+        Node balk = new Node(LinkedListUtil.getNode(balkan, LinkedListUtil.length(balkan)-1).getData());
+        return balk;
+    }// - returns the item from the front of the queue
     public boolean empty(){
-        if(size == 0){
+        if(LinkedListUtil.length(balkan) == 0){
             return true;
+        }else{
+            return false;
         }
-        return false;
-    } //- returns true if the queue is empty and false otherwise
+    }// - returns true if the queue is empty and false otherwise
     public int search(Node item){
-        for(int i=0; i<size; i++){
-            if(Stack[i].equals(item)){
-                return i;
-            }
+        if(LinkedListUtil.search(balkan, item.getData()) == -1){
+            return -1;
+        }else{
+            return LinkedListUtil.length(balkan) - LinkedListUtil.search(balkan, item.getData()) - 1;
         }
-        return -1;
-    } //- returns the location of the item in the queue
-
+    }// - returns the location of the item in the queue
 }

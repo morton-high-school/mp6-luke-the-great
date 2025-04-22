@@ -165,10 +165,16 @@ public class LinkedListAutograder{
   //   a4.append(b62);
   //   a4.append(b21);
 
+<<<<<<< HEAD
   //   LinkedList a5 = LinkedListUtil.reverse(a2);
 
   //   boolean t11 = LinkedListUtil.compare(a2, a3);
   //   boolean t12 = LinkedListUtil.compare(a4, a5);
+=======
+    LinkedList a5 = LinkedListUtil.reverse(a2);
+    boolean t11 = LinkedListUtil.compare(a2, a3);
+    boolean t12 = LinkedListUtil.compare(a4, a5);
+>>>>>>> 7977b7396c742b228c2fd27f128a39221bb113aa
 
   //   if(!t1){
   //     System.out.println("Failed Linked List Util Test 1.");
